@@ -1,0 +1,74 @@
+{% extends "main.html" %}
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}">
+{% endblock %}
+{% block tabs %}
+  {{ super() }}
+  <style>
+    .md-main__inner { margin: 0; }
+    .md-content, .md-sidebar { display: none; }
+  </style>
+  <section class="pb-home" data-md-color-scheme="slate">
+
+    <div class="pb-hero">
+      <p class="pb-kicker">Self-hosted · Klipper &amp; Moonraker</p>
+      <h1>Printer Buddy<br><span>One easy ecosystem.</span></h1>
+      <p class="pb-lead">Printer Buddy is a set of simple apps for your Klipper printers &mdash; AI failure detection, timelapses,
+        notifications, a camera streamer and remote access. Pick the ones you want, install them with one script and keep
+        them all up to date from one place. Run it on a printer or on a dedicated host.
+        Klipper today, with support for more printers on the way.</p>
+      <p class="pb-buttons">
+        <a href="install/" class="md-button md-button--primary">Install it &rarr;</a>
+        <a href="using/dashboard/" class="md-button">See what it does</a>
+      </p>
+      <p class="pb-small">Already running it? Jump to <a href="updates/">Updates</a> or <a href="troubleshooting/">Troubleshooting</a>.</p>
+    </div>
+
+    <div class="pb-grid">
+      <a class="pb-card" href="using/dashboard/">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        <h3>All your printers</h3>
+        <p>Scan the network, select your printers, done. Status, progress, time left, temps and cameras for all of them, side by side.</p>
+      </a>
+      <a class="pb-card" href="using/ai/">
+        <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-6 6c0 2.2 1.2 3.6 2 4.5V16h8v-2.5c.8-.9 2-2.3 2-4.5a6 6 0 0 0-6-6z"/><path d="M9.5 19h5M10.5 21.5h3"/></svg>
+        <h3>AI failure detection</h3>
+        <p>Spots spaghetti, warping, first-layer problems, stringing and more from the camera &mdash; then alerts you or pauses the print.</p>
+      </a>
+      <a class="pb-card" href="using/printer-page/">
+        <svg viewBox="0 0 24 24"><path d="M4 17l6-5-6-5"/><path d="M12 19h8"/></svg>
+        <h3>Full printer control</h3>
+        <p>Move, heat, console, files, macros, bed mesh and a Save config button after calibrations &mdash; laid out the way you want.</p>
+      </a>
+      <a class="pb-card" href="using/timelapse/">
+        <svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg>
+        <h3>Timelapses</h3>
+        <p>A timelapse of every print, made by Printer Buddy and kept in one place.</p>
+      </a>
+      <a class="pb-card" href="using/notifications/">
+        <svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg>
+        <h3>Notifications</h3>
+        <p>ntfy or Discord when prints start, pause, finish or fail &mdash; with a picture when the AI sees a problem.</p>
+      </a>
+      <a class="pb-card" href="using/remote/">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        <h3>From anywhere</h3>
+        <p>Optional remote access and share links, so you can check a print from your phone away from home.</p>
+      </a>
+    </div>
+
+    <div class="pb-steps">
+      <h2>Up and running in three steps</h2>
+      <ol>
+        <li><b>Install</b><span>Clone the repo on a Pi, a server or a printer and run <code>./install.sh</code>.</span></li>
+        <li><b>Add printers</b><span>Scan the network and pick your Moonraker printers.</span></li>
+        <li><b>Pick your apps</b><span>Turn on the apps you want, and switch or update them any time from one place.</span></li>
+      </ol>
+      <p class="pb-buttons"><a href="install/" class="md-button md-button--primary">Get started &rarr;</a></p>
+    </div>
+
+  </section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
